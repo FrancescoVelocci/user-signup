@@ -1,0 +1,61 @@
+    {% extends "base.html" %}
+
+    {% block content %}
+
+<article>
+    <header><div><strong>Signup</strong></div></header><br/>
+    <form activate='/welocme' method='POST'>
+    <table>
+    <tbody>
+        <tr>
+            <td>
+                <label for='user'>Username</label>
+            </td>
+            <td>
+                <input id='user' type='text' name='username' value="{{username}}"/>
+            </td>
+            <td>
+                <span class='err'>{{username_error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for='pwd'>Password</label>
+            </td>
+            <td>
+                <input id='pwd' type='password' name='password' value="{{password}}" />
+            </td>
+            <td>
+                <span class='err'>{{password_error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>    
+                <label for='v-pwd'>Verify Password</label>
+            </td>
+            <td>
+                <input id='v-pwd' type='password' name='verify_pwd' value="{{verify_pwd}}" />
+            </td>
+            <td>
+                <span class='err'>{{v_pwd_error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for='email'>Email (optional)</label>
+            </td>
+            <td>
+                <input id='email' type='text' name='email' value="{{email}}" />
+            </td>
+            <td>
+                <span class='err'>{{email_error}}</span>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+        <br/>
+            <input type='submit' value='Submit' />
+
+</article>
+
+    {% endblock %}
